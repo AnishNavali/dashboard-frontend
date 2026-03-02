@@ -214,12 +214,14 @@ return (
             </a>
           </p>
         </div>
-
+      <div className="mt-4 text-center text-xs text-slate-500">
+  © {new Date().getFullYear()} Equilibrate. All rights reserved.
+</div>
       </CardContent>
+
     </Card>
 
   </div>
+  
 );
-
-
 }
