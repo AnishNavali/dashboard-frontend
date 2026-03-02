@@ -1,9 +1,12 @@
-import { LoginForm } from "../components/login/login";
+import Footer from "../components/footer/footer";
+import HomePage from "../components/home/home";
+
 export default function Home() {
   return (
-<div>
+    <div>
       <div>
-        <LoginForm />
+        <HomePage />
+        <Footer />
       </div>
     </div>
   );

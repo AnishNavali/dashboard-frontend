@@ -14,20 +14,22 @@ import { DashboardContent } from "./dashboard-content";
 export function SalesDashboard() {
   const [userEmail, setUserEmail] = useState<string>("");
   const [showUserMenu, setShowUserMenu] = useState(false);
+  const [authChecked, setAuthChecked] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
     // Auth guard: redirect to login if no auth token
     const token = localStorage.getItem("auth_token");
     if (!token) {
-      toast.error("Please login first", { duration: 2000 });
-      router.push("/");
+      toast.error("Session expired, please login first", { duration: 3000 });
+      router.push("/login");
       return;
     }
 
     const email = localStorage.getItem("user_email") || "";
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setUserEmail(email);
+    setAuthChecked(true);
   }, [router]);
 
   const handleLogout = () => {
@@ -40,6 +42,11 @@ export function SalesDashboard() {
   const handleSettings = () => {
     router.push("/settings");
   };
+
+  // Don't render anything until auth check is complete
+  if (!authChecked) {
+    return null;
+  }
 
   return (
     <div className="h-screen flex flex-col bg-white">
