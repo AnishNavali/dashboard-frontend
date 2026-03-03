@@ -78,29 +78,43 @@ export function LoginForm({
       <NavigationBar />
 
       {/* Main content centered */}
-      <div className="flex-1 flex items-center justify-center p-4 relative">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(59,130,246,0.15),transparent_60%)]" />
+      <div className="flex-1 flex items-center justify-center pt-12 pb-32 px-4 relative overflow-hidden">
+        {/* Install App Button top right below navbar */}
+        <div className="absolute top-4 right-4 z-20">
+          <InstallAppButton />
+        </div>
+        {/* Minimalist Background Elements */}
+        <div className="absolute inset-0 z-0 opacity-[0.6] pointer-events-none"
+          style={{
+            backgroundImage: `radial-gradient(#cbd5e1 1px, transparent 1px)`,
+            backgroundSize: '32px 32px'
+          }}>
+        </div>
+        <div className="absolute inset-0 z-0 pointer-events-none"
+          style={{
+            background: `
+                 radial-gradient(circle at 0% 0%, rgba(0,102,255,0.15) 0%, transparent 50%),
+                 radial-gradient(circle at 100% 100%, rgba(0,102,255,0.15) 0%, transparent 50%)
+               `
+          }}>
+        </div>
 
         <Card
-          className="relative w-full max-w-md
-  bg-white/20 backdrop-blur-xl
-  border border-white/40
-  shadow-[0_20px_60px_rgba(0,0,0,0.2)]
-  rounded-2xl overflow-hidden"
+          className="relative w-full max-w-md z-10
+  bg-white border border-black/5
+   shadow-[0_15px_40px_rgba(0,0,0,0.08),0_5px_15px_rgba(0,102,255,0.15)]
+  rounded-[2.5rem] overflow-hidden"
         >
-          <div className="absolute top-0 left-0 right-0 h-40 
-      bg-gradient-to-b from-blue-100 via-blue-50 to-transparent 
-      opacity-40 blur-3xl -mt-20" />
 
           <CardContent className="relative p-8">
             <div className="flex flex-col items-center mb-8">
-              <div className="w-24 h-24 rounded-full overflow-hidden shadow-lg">
+              <div className="w-20 h-20 rounded-full overflow-hidden shadow-sm border border-black/5 bg-slate-50 flex items-center justify-center">
                 <Image
                   src="/logo.png"
                   alt="Logo"
-                  width={96}
-                  height={96}
-                  className="object-cover"
+                  width={80}
+                  height={80}
+                  className="object-contain"
                 />
               </div>
 
@@ -121,10 +135,10 @@ export function LoginForm({
                   placeholder="Enter your username"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
-                  className="h-12 rounded-lg bg-gray-50 border border-gray-200
+                  className="h-12 rounded-xl bg-slate-50/50 border-black/10
               placeholder:text-gray-400
-              focus:ring-2 focus:ring-blue-500/40
-              focus:border-blue-500
+               focus:ring-2 focus:ring-blue-600/20
+              focus:border-blue-600
               transition-all duration-200"
                   required
                 />
@@ -149,10 +163,10 @@ export function LoginForm({
                     placeholder="Enter your password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="h-12 rounded-lg bg-gray-50 border border-gray-200 pr-10
+                    className="h-12 rounded-xl bg-slate-50/50 border-black/10 pr-10
                 placeholder:text-gray-400
-                focus:ring-2 focus:ring-blue-500/40
-                focus:border-blue-500
+                 focus:ring-2 focus:ring-blue-600/20
+                focus:border-blue-600
                 transition-all duration-200"
                     required
                   />
@@ -175,10 +189,9 @@ export function LoginForm({
               <Button
                 type="submit"
                 disabled={loading}
-                className="w-full h-12 rounded-lg text-sm font-medium text-white
-            bg-gradient-to-t from-blue-600 via-blue-500 to-blue-400
-            hover:from-blue-700 hover:via-blue-600 hover:to-blue-500
-            shadow-sm hover:shadow-md hover:shadow-blue-100
+                className="w-full h-12 rounded-xl text-sm font-semibold text-white
+             bg-blue-600 hover:bg-blue-700
+            shadow-lg shadow-blue-600/20
             active:scale-[0.98]
             transition-all duration-200"
               >
@@ -191,16 +204,13 @@ export function LoginForm({
                 Don&apos;t have an account?{" "}
                 <a
                   href="/signup"
-                  className="text-blue-600 hover:underline font-medium"
+                  className="text-blue-600 hover:underline font-semibold"
                 >
                   Sign up
                 </a>
               </p>
             </div>
 
-            <div className="mt-4 text-center text-xs text-slate-500">
-              © {new Date().getFullYear()} Equilibrate. All rights reserved.
-            </div>
           </CardContent>
         </Card>
       </div>
@@ -208,10 +218,7 @@ export function LoginForm({
       {/* Footer at the bottom */}
       <Footer />
 
-      {/* InstallAppButton — fixed bottom-right */}
-      <div className="fixed bottom-4 right-4 z-50">
-        <InstallAppButton />
-      </div>
+
     </div>
   );
 }

@@ -33,6 +33,7 @@ import {
 } from "../ui/dialog";
 import { NavigationBar } from "../dashboard/navigation-bar";
 import Footer from "../footer/footer";
+import { InstallAppButton } from "../pwa/install-app-button";
 
 export function SignupPage({
   className,
@@ -114,32 +115,39 @@ export function SignupPage({
       {...props}
     >
       <NavigationBar />
-      <div className="flex-1 flex items-center justify-center bg-gradient-to-br from-white-100 via-blue-100 to-blue-50">
+      <div className="flex-1 flex items-center justify-center pt-12 pb-32 px-4 relative overflow-hidden">
+        {/* Install App Button top right below navbar */}
+        <div className="absolute top-4 right-4 z-20">
+          <InstallAppButton />
+        </div>
+        {/* Minimalist Background Elements */}
+        <div className="absolute inset-0 z-0 opacity-[0.8] pointer-events-none">
+        </div>
+        {/* Minimalist Background Elements */}
+        <div className="absolute inset-0 z-0 opacity-[0.6] pointer-events-none"
+          style={{
+            backgroundImage: `radial-gradient(#cbd5e1 1px, transparent 1px)`,
+            backgroundSize: '32px 32px'
+          }}>
+        </div>
+        <div className="absolute inset-0 z-0 pointer-events-none"
+          style={{
+            background: `
+                 radial-gradient(circle at 0% 0%, rgba(0,102,255,0.15) 0%, transparent 50%),
+                 radial-gradient(circle at 100% 100%, rgba(0,102,255,0.15) 0%, transparent 50%)
+               `
+          }}>
+        </div>
+
         <Card
-          className="w-full max-w-5xl rounded-3xl overflow-hidden
-      shadow-[0_30px_80px_rgba(0,0,0,0.12)]
-      bg-grey-200/40"
+          className="w-full max-w-xl rounded-[2.5rem] overflow-hidden relative z-10
+      border border-black/5 
+      shadow-[0_15px_40px_rgba(0,0,0,0.08),0_5px_15px_rgba(0,102,255,0.15)]
+      bg-white"
         >
-          <CardContent className="grid md:grid-cols-2 p-0">
+          <CardContent className="p-0">
 
-            {/* LEFT IMAGE SECTION */}
-            <div className="relative hidden md:block">
-              <Image
-                src="/signup.png"
-                alt="Signup Visual"
-                fill
-                className="object-cover "
-                priority
-              />
-            </div>
-
-
-            <div
-              className="relative px-10 py-6
-  backdrop-blur-2xl
-  bg-white/[20%]
-  border-l border-white/40"
-            >
+            <div className="relative px-8 pt-0 pb-10 sm:px-12 sm:pt-2 sm:pb-12">
 
 
               <div className="relative">
@@ -147,15 +155,15 @@ export function SignupPage({
                 {/* Header */}
                 <div className="flex flex-col items-center text-center mb-8">
 
-                  <div className="w-12 h-12 rounded-full overflow-hidden
-              bg-white/40 backdrop-blur-md
-              border border-white/50
-              flex items-center justify-center mb-3 shadow-md">
+                  <div className="w-14 h-14 rounded-full overflow-hidden
+              bg-slate-50
+              border border-black/5
+              flex items-center justify-center mb-4 shadow-sm">
                     <Image
                       src="/logo.png"
                       alt="Logo"
-                      width={56}
-                      height={56}
+                      width={64}
+                      height={64}
                       className="object-contain"
                     />
                   </div>
@@ -179,7 +187,7 @@ export function SignupPage({
                       placeholder="Enter your full name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="h-12 bg-white/40 border-white/50"
+                      className="h-12 bg-slate-50/50 border-black/10 focus:border-blue-600 focus:ring-blue-600/20 rounded-xl transition-all"
                       required
                     />
                   </div>
@@ -194,7 +202,7 @@ export function SignupPage({
                       value={formData.email}
                       onChange={handleInputChange}
 
-                      className="h-12 bg-white/40 border-white/50"
+                      className="h-12 bg-slate-50/50 border-black/10 focus:border-blue-600 focus:ring-blue-600/20 rounded-xl transition-all"
                       required
                     />
                   </div>
@@ -216,15 +224,15 @@ export function SignupPage({
                       inputStyle={{
                         width: "100%",
                         height: "48px",
-                        backgroundColor: "rgba(255,255,255,0.4)",
-                        borderColor: "rgba(255,255,255,0.5)",
-                        borderRadius: "0.5rem",
+                        backgroundColor: "rgba(248, 250, 252, 0.5)",
+                        borderColor: "rgba(0,0,0,0.1)",
+                        borderRadius: "0.75rem",
                         fontSize: "14px",
                       }}
                       buttonStyle={{
-                        backgroundColor: "rgba(255,255,255,0.4)",
-                        borderColor: "rgba(255,255,255,0.5)",
-                        borderRadius: "0.5rem 0 0 0.5rem",
+                        backgroundColor: "rgba(248, 250, 252, 0.5)",
+                        borderColor: "rgba(0,0,0,0.1)",
+                        borderRadius: "0.75rem 0 0 0.75rem",
                       }}
                       searchStyle={{
                         width: "100%",
@@ -251,7 +259,7 @@ export function SignupPage({
                           } as any)
                         }
                       >
-                        <SelectTrigger className="h-9.5 bg-white/40 border-white/50 w-full">
+                        <SelectTrigger className="h-11 bg-slate-50/50 border-black/10 focus:border-blue-600 focus:ring-blue-600/20 w-full rounded-xl transition-all">
 
                           <SelectValue placeholder="Select Occupation" />
                         </SelectTrigger>
@@ -272,8 +280,7 @@ export function SignupPage({
                         value={formData.organization}
                         onChange={handleInputChange}
 
-                        className="h-9 bg-white/40 border-white/50 w-full"
-
+                        className="h-11 bg-slate-50/50 border-black/10 focus:border-blue-600 focus:ring-blue-600/20 w-full rounded-xl transition-all"
                         required
                       />
                     </div>
@@ -285,7 +292,7 @@ export function SignupPage({
                       id="terms"
                       checked={acceptedTerms}
                       onCheckedChange={(value) => setAcceptedTerms(Boolean(value))}
-                      className="mt-1 border-blue-500 border-2 "
+                      className="mt-1 border-blue-600 data-[state=checked]:bg-blue-600 data-[state=checked]:text-white rounded-md"
                     />
 
                     <Label htmlFor="terms" className="leading-relaxed">
@@ -294,7 +301,7 @@ export function SignupPage({
                         <DialogTrigger asChild>
                           <button
                             type="button"
-                            className="text-blue-700 underline hover:text-blue-900"
+                            className="text-blue-600 underline hover:text-blue-800 font-medium"
                           >
                             Terms & Conditions
                           </button>
@@ -756,9 +763,9 @@ export function SignupPage({
                   <Button
                     type="submit"
                     disabled={loading || !acceptedTerms}
-                    className="w-full h-12 rounded-lg text-white
-                bg-gradient-to-t from-blue-600 via-blue-500 to-blue-400
-                shadow-md hover:shadow-lg transition-all duration-200"
+                    className="w-full h-12 rounded-xl text-white
+                bg-blue-600 hover:bg-blue-700
+                shadow-lg shadow-blue-600/20 transition-all duration-200 font-semibold"
                   >
                     {loading ? "Creating..." : "Create Account"}
                   </Button>
@@ -766,17 +773,15 @@ export function SignupPage({
                   <p className="text-xs text-center text-gray-800">
                     Already have an account?{" "}
                     <a
-                      href="/"
-                      className="text-blue-700 hover:underline font-medium"
+                      href="/login"
+                      className="text-blue-600 hover:underline font-semibold text-sm"
                     >
                       Login
                     </a>
                   </p>
 
                 </form>
-                <div className="mt-4 text-center text-xs text-slate-500">
-                  © {new Date().getFullYear()} Equilibrate. All rights reserved.
-                </div>
+
               </div>
             </div>
 

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { Github, Youtube, Twitter, Linkedin } from 'lucide-react';
 
 const sections = [
   {
@@ -30,80 +31,87 @@ const sections = [
 ];
 
 const socialLinks = [
-  {
-    name: 'GitHub',
-    href: '#',
-    icon: (
-      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="#2b3137">
-        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-      </svg>
-    )
-  },
-  {
-    name: 'YouTube',
-    href: '#',
-    icon: (
-      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="red">
-        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-      </svg>
-    )
-  },
-  {
-    name: 'Twitter',
-    href: '#',
-    icon: (
-      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
-        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231z" />
-      </svg>
-    )
-  },
-  {
-    name: 'LinkedIn',
-    href: '#',
-    icon: (
-      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="blue">
-        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286z" />
-      </svg>
-    )
-  }
+  { name: 'GitHub', href: '#', icon: <Github className="h-5 w-5" /> },
+  { name: 'YouTube', href: '#', icon: <Youtube className="h-5 w-5" /> },
+  { name: 'Twitter', href: '#', icon: <Twitter className="h-5 w-5" /> },
+  { name: 'LinkedIn', href: '#', icon: <Linkedin className="h-5 w-5" /> }
 ];
-
-const Underline = `hover:-translate-y-1 border border-dotted rounded-xl p-2.5 transition-transform`;
 
 const Footer = () => {
   return (
-    <footer className="w-full border-t border-white/20 bg-white/40 backdrop-blur-xl shadow-[0_-5px_20px_rgba(0,0,0,0.05)] mt-10">
-      {/* Logo and Description */}
-      <div className="relative mx-auto grid max-w-7xl items-center justify-center gap-6 p-10 pb-0 flex">
-        <Link href="/">
-          <span className="flex items-center justify-center gap-4">
-            <Image
-              src="/logo.png"
-              alt="Adro Logo"
-              width={48}
-              height={48}
-            />
-            <p className="text-2xl font-semibold">Adro</p>
-          </span>
-        </Link>
-        <p className="bg-transparent text-center text-xs leading-4 text-primary/60 md:text-left">
-          Adro is an AI-powered data analytics platform that transforms CSV and Excel files into intelligent dashboards and actionable insights in seconds.
-        </p>
-      </div>
+    <footer className="w-full relative -mt-24 z-20 text-slate-800">
+      {/* Background with enhanced glass effect */}
+      <div
+        className="absolute inset-0 bg-white/[0.03] border-t border-white/10 shadow-[0_-20px_40px_rgba(0,0,0,0.05)]"
+        style={{
+          backdropFilter: 'blur(40px) saturate(180%)',
+          WebkitBackdropFilter: 'blur(40px) saturate(180%)'
+        }}
+      />
 
-      {/* Navigation Links */}
-      <div className="mx-auto px-6 py-10 container">
-        <div className="py-10">
-          <div className="grid grid-cols-3 gap-6 lg:gap-20">
+      {/* Faded top separator line */}
+      <div
+        className="absolute inset-x-0 top-0 h-px z-30"
+        style={{
+          background: 'linear-gradient(to right, transparent, rgba(255,255,255,0.3) 50%, transparent)'
+        }}
+      />
+
+      <div className="relative px-8 md:px-12 pt-32 pb-14">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-24">
+          {/* Logo and Description - Leftmost alignment and more width */}
+          <div className="md:col-span-5 flex flex-col gap-5">
+            <Link href="/" className="flex items-center gap-0 w-fit transition-transform hover:scale-[1.02] active:scale-95">
+              <div className="w-9 h-9 rounded-full overflow-hidden flex items-center justify-center border border-white/10 bg-white/5">
+                <Image
+                  src="/logo.png"
+                  alt="Adro Logo"
+                  width={36}
+                  height={36}
+                  className="object-cover rounded-full"
+                />
+              </div>
+              <Image
+                src="/adrofont.png"
+                alt="Adro"
+                width={115}
+                height={36}
+                className="object-contain -ml-1.5"
+              />
+            </Link>
+            <p className="text-sm text-slate-600 leading-relaxed max-w-sm">
+              Adro is an AI-powered data analytics platform that transforms CSV and Excel files into intelligent dashboards and actionable insights in seconds.
+            </p>
+            {/* Social Links for Desktop */}
+            <div className="hidden md:flex items-center gap-5 mt-4">
+              {socialLinks.map((link, idx) => (
+                <Link
+                  key={idx}
+                  href={link.href}
+                  aria-label={link.name}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-slate-400 hover:text-blue-600 hover:scale-110 transition-all duration-200"
+                >
+                  {link.icon}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Navigation Links Grid */}
+          <div className="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-10">
             {sections.map((section, idx) => (
-              <div key={idx} className="flex flex-col">
-                <h3 className="mb-6 font-bold">{section.title}</h3>
-                <ul className="space-y-4 text-sm">
+              <div key={idx} className="flex flex-col gap-4">
+                <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider">
+                  {section.title}
+                </h3>
+                <ul className="flex flex-col gap-3">
                   {section.links.map((link, linkIdx) => (
                     <li key={linkIdx}>
                       <Link
                         href={link.href}
-                        className="text-slate-600 hover:text-black dark:text-slate-400 hover:dark:text-white"
+                        className="text-sm text-slate-600 hover:text-blue-600 transition-colors duration-200"
                       >
                         {link.name}
                       </Link>
@@ -114,34 +122,16 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="border-b border-dotted"></div>
-      </div>
 
-      {/* Social Links */}
-      <div className="flex flex-wrap justify-center gap-y-6">
-        <div className="flex flex-wrap items-center justify-center gap-6 gap-y-4 px-6">
-          {socialLinks.map((link, idx) => (
-            <Link
-              key={idx}
-              href={link.href}
-              aria-label={link.name}
-              target="_blank"
-              rel="noreferrer"
-              className={Underline}
-            >
-              {link.icon}
-            </Link>
-          ))}
-        </div>
-      </div>
+        {/* Footer Bottom Bar */}
+        <div className="mt-12 pt-8 border-t border-slate-200/20 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="text-xs text-slate-500 font-medium">
+            © {new Date().getFullYear()} Adro. All rights reserved. • Built for modern data teams
+          </div>
 
-      {/* Bottom Section */}
-      <div className="mx-auto mb-10 mt-10 flex flex-col justify-between text-center text-xs md:max-w-7xl">
-        <div className="flex flex-row items-center justify-center gap-1 text-slate-600 dark:text-slate-400">
-          <span>© {new Date().getFullYear()} Adro. All rights reserved.</span>
-          <span className="mx-2">•</span>
-          <div className="flex items-center gap-2">
-            <span>Built for modern data teams</span>
+          <div className="flex items-center gap-6 text-xs text-slate-500">
+            <Link href="#" className="hover:text-blue-600 transition-colors">Privacy Policy</Link>
+            <Link href="#" className="hover:text-blue-600 transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

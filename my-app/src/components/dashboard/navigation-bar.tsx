@@ -76,17 +76,23 @@ export const NavigationBar = ({
   return (
     <div className="border-b border-white/20 bg-transparent backdrop-blur-md shadow-sm px-6 py-2 flex items-center justify-between sticky top-0 z-50">
       {/* Brand / Logo */}
-      <Link href={isDashboard ? "/dashboard" : "/"} className="flex items-center gap-2">
-        <div className="w-8 h-8 rounded-full overflow-hidden flex items-center justify-center">
+      <Link href={isDashboard ? "/dashboard" : "/"} className="flex items-center gap-0">
+        <div className="w-8 h-8 rounded-full overflow-hidden flex items-center justify-center border border-white/10 shadow-sm bg-white/5">
           <Image
             src="/logo.png"
             alt="Logo"
             width={32}
             height={32}
-            className="object-contain"
+            className="object-cover rounded-full"
           />
         </div>
-        <span className="font-bold text-slate-800 text-base">ADRO</span>
+        <Image
+          src="/adrofont.png"
+          alt="Adro"
+          width={115}
+          height={32}
+          className="object-contain -ml-1.5"
+        />
       </Link>
 
       <div className="flex items-center gap-4">
