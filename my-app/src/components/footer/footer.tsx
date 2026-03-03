@@ -155,7 +155,7 @@ const Footer = () => {
         {/* Footer Bottom Bar - Centered */}
         <div className="mt-6 pt-8 border-t border-slate-200/20 flex flex-col items-center justify-center gap-6">
           <div className="text-xs text-slate-500 font-medium text-center">
-            © {new Date().getFullYear()} ADRO. All rights reserved. • Built for modern data teams
+            © {new Date().getFullYear()} Equilibrate.AI Technologies private limited. All rights reserved. • Built for modern data teams
           </div>
         </div>
       </div>

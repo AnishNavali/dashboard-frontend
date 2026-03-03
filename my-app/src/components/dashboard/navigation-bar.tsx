@@ -21,7 +21,7 @@ import { RippleButton } from "@/components/ripple-button";
 
 const navbarItems = [
   // { title: "Demo", href: "/demo" },
-  { title: "Docs", href: "/docs" },
+  { title: "Guide", href: "/docs" },
   { title: "Pricing", href: "/pricing" },
   // { title: "About Us", href: "/about-us" },
   { title: "FAQ", href: "/faq" },
