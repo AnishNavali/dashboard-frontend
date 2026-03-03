@@ -597,7 +597,11 @@ export const DashboardContent = ({ userEmail }: DashboardContentProps) => {
       if (toastId) {
         toast.dismiss(toastId);
       }
-      const id = toast.error(`Failed to delete file: ${error.message}`);
+      let displayError = error.message;
+      if (displayError.includes("failed to soft delete from s3")) {
+        displayError = "Failed to delete";
+      }
+      const id = toast.error(`Failed to delete file: ${displayError}`);
       setToastId(id);
     }
   };
@@ -1053,7 +1057,7 @@ export const DashboardContent = ({ userEmail }: DashboardContentProps) => {
                 className="flex flex-col items-center"
               >
                 <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400 mb-2">
-                  Adro is here to assist you
+                  ADRO is here to assist you
                 </h1>
                 <p className="text-gray-500 max-w-md">
                   Ask me anything or try one of the suggestions below
@@ -1363,13 +1367,13 @@ export const DashboardContent = ({ userEmail }: DashboardContentProps) => {
               </div>
 
               <div className="px-4 pb-2 text-xs text-gray-600 text-center font-bold border-white/30 pt-2 relative">
-                Adro can make mistakes. Check important info.
+                ADRO can make mistakes. Check important info.
               </div>
             </div>
           </div>
         )}
       <div className="px-4 pb-2 text-xs text-gray-400 font-bold text-center border-t border-white/30 pt-2">
-        Adro can make mistakes. Check important info.
+        ADRO can make mistakes. Check important info.
       </div>
       <FileDialogs
         showFileDialog={showFileDialog}

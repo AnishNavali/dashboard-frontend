@@ -84,7 +84,7 @@ const integrationDetails = {
 
 export default function LandingSecFive() {
     return (
-        <div className="w-full py-16">
+        <div className="w-full py-2">
             <motion.div
                 initial={{ opacity: 0.0, y: -40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -108,7 +108,7 @@ export default function LandingSecFive() {
                                     transition={{ duration: 0.8 }}
                                     className="text-3xl lg:text-5xl tracking-tighter max-w-xl text-left font-regular"
                                 >
-                                    Turn Raw Data into Instant Dashboards with Adro.
+                                    Turn Raw Data into Instant Dashboards with ADRO.
                                 </motion.h2>
                                 <motion.p
                                     initial={{ opacity: 0, y: 40 }}
@@ -183,7 +183,7 @@ export default function LandingSecFive() {
                                     height="300"
                                     autoPlay
                                 >
-                                    <source src="/videos/CJS.mp4" type="video/mp4" />
+                                    <source src="/demo-video.mp4" type="video/mp4" />
                                 </video>
                             </div>
                         </div>

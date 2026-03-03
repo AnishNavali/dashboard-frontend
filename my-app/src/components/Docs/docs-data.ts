@@ -39,13 +39,13 @@ export const docsData: DocSection[] = [
                 content: [
                     {
                         type: "paragraph",
-                        text: "To begin using Adro, you need to create an account. The registration process is straightforward and designed to get you up and running quickly.",
+                        text: "To begin using ADRO, you need to create an account. The registration process is straightforward and designed to get you up and running quickly.",
                     },
                 ],
                 steps: [
                     {
                         title: "Visit Website",
-                        description: "Go to the Adro official website and click on Sign Up.",
+                        description: "Go to the ADRO official website and click on Sign Up.",
                         image: "/signup-pic.png"
                     },
                     {
@@ -67,7 +67,7 @@ export const docsData: DocSection[] = [
                 content: [
                     {
                         type: "paragraph",
-                        text: "After your account is approved and you log in for the first time, you're ready to start exploring Adro's capabilities immediately.",
+                        text: "After your account is approved and you log in for the first time, you're ready to start exploring ADRO's capabilities immediately.",
                     },
                     {
                         type: "heading",
@@ -77,20 +77,20 @@ export const docsData: DocSection[] = [
                         type: "list",
                         items: [
                             "You will receive 10 complimentary credits upon first login",
-                            "1 credit = $1",
+
                             "Credits are consumed based on platform usage",
                         ],
                     },
                     {
                         type: "callout",
                         variant: "tip",
-                        text: "These initial credits allow you to immediately explore Adro's AI-powered dashboard capabilities without any upfront cost.",
+                        text: "These initial credits allow you to immediately explore ADRO's AI-powered dashboard capabilities without any upfront cost.",
                     },
                 ],
                 steps: [
                     {
                         title: "Visit Login Page",
-                        description: "Head to the login portal to access your Adro account.",
+                        description: "Head to the login portal to access your ADRO account.",
                         image: "/login-pic-1.png"
                     },
                     {
@@ -119,7 +119,7 @@ export const docsData: DocSection[] = [
                 content: [
                     {
                         type: "paragraph",
-                        text: "Uploading your data to Adro is a simple, guided process that takes just a few clicks.",
+                        text: "Uploading your data to ADRO is a simple, guided process that takes just a few clicks.",
                     }
                 ],
                 steps: [
@@ -135,7 +135,7 @@ export const docsData: DocSection[] = [
                     },
                     {
                         title: "Process Data",
-                        description: "Wait for Adro to analyze and structure your data automatically.",
+                        description: "Wait for ADRO to analyze and structure your data automatically.",
                         image: "/upload-pic-3.png"
                     }
                 ]
@@ -147,7 +147,7 @@ export const docsData: DocSection[] = [
                 content: [
                     {
                         type: "paragraph",
-                        text: "Adro supports structured datasets to ensure compatibility with a wide range of business data sources.",
+                        text: "ADRO supports structured datasets to ensure compatibility with a wide range of business data sources.",
                     },
                     {
                         type: "heading",
@@ -207,7 +207,7 @@ export const docsData: DocSection[] = [
                 content: [
                     {
                         type: "paragraph",
-                        text: "Adro automatically creates rich, interactive dashboards from your data — no manual configuration needed.",
+                        text: "ADRO automatically creates rich, interactive dashboards from your data — no manual configuration needed.",
                     },
                     {
                         type: "list",
@@ -222,7 +222,7 @@ export const docsData: DocSection[] = [
                 steps: [
                     {
                         title: "Generate Insights",
-                        description: "Witness Adro turning your raw data into actionable insights.",
+                        description: "Witness ADRO turning your raw data into actionable insights.",
                         image: "/dashboard-pic.png"
                     },
                     {
@@ -246,7 +246,7 @@ export const docsData: DocSection[] = [
                 content: [
                     {
                         type: "paragraph",
-                        text: "Adro allows you to export your generated dashboards in multiple formats, making it easy to share and present your insights.",
+                        text: "ADRO allows you to export your generated dashboards in multiple formats, making it easy to share and present your insights.",
                     },
                     {
                         type: "list",

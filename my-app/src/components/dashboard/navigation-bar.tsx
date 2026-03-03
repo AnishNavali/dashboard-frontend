@@ -74,7 +74,7 @@ export const NavigationBar = ({
   });
 
   return (
-    <div className="border-b border-white/20 bg-transparent backdrop-blur-md shadow-sm px-6 py-2 flex items-center justify-between sticky top-0 z-50">
+    <div className="border-b border-white/20 bg-transparent backdrop-blur-md shadow-sm px-6 py-2 flex items-center justify-between sticky top-0 left-0 right-0 z-[100]">
       <Link href={isDashboard ? "/dashboard" : "/"} className="flex items-center gap-0">
         <div className="w-8 h-8 rounded-full overflow-hidden flex items-center justify-center border border-white/10 shadow-sm bg-white/5">
           <Image
@@ -86,7 +86,7 @@ export const NavigationBar = ({
           />
         </div>
         <span className="text-xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent ml-2">
-          Adro
+          ADRO
         </span>
       </Link>
 
@@ -158,7 +158,7 @@ export const NavigationBar = ({
           </>
         )}
 
-        {/* ─── /docs /pricing /faq /demo: full nav + Login/Signup OR full profile dropdown ─── */}
+        {/* ─── /docs /pricing /faq /demo: full nav + Login/Signup OR small user icon (same as home) ─── */}
         {!isDashboard && !isHome && (
           <>
             {navbarItems.map((item) => (
@@ -179,28 +179,23 @@ export const NavigationBar = ({
               </>
             )}
 
-            {/* Logged in → full user profile dropdown */}
+            {/* Logged in → small circular icon + tooltip (Same as Homepage) */}
             {userEmail && (
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="outline" className="flex items-center gap-2">
-                    <User className="w-4 h-4 text-indigo-600" />
-                    <span className="text-sm font-medium text-slate-800">
-                      {userEmail.split("@")[0]}
-                    </span>
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="w-48">
-                  <DropdownMenuItem onClick={handleSettings} className="cursor-pointer">
-                    <Settings className="w-4 h-4 mr-2" />
-                    Settings
-                  </DropdownMenuItem>
-                  <DropdownMenuItem onClick={handleLogout} className="cursor-pointer text-red-600">
-                    <LogOut className="w-4 h-4 mr-2" />
-                    Logout
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <button
+                    onClick={() => router.push("/dashboard")}
+                    className="w-9 h-9 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white flex items-center justify-center shadow-md transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2"
+                    aria-label="Go to dashboard"
+                  >
+                    <User className="w-4 h-4" />
+                  </button>
+                </TooltipTrigger>
+                <TooltipContent side="bottom" className="text-xs">
+                  <p className="font-medium">{userEmail}</p>
+                  <p className="text-primary-foreground/70">Go to Dashboard →</p>
+                </TooltipContent>
+              </Tooltip>
             )}
           </>
         )}

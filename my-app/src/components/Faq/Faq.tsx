@@ -20,23 +20,23 @@ interface FAQItem {
 const faqItems: FAQItem[] = [
     {
         id: "faq-1",
-        question: "What is Adro?",
-        answer: "Adro is an AI-powered data analytics platform that converts CSV and Excel files into intelligent, interactive dashboards instantly. It enables businesses to gain actionable insights without complex BI tools or coding."
+        question: "What is ADRO?",
+        answer: "ADRO is an AI-powered data analytics platform that converts CSV and Excel files into intelligent, interactive dashboards instantly. It enables businesses to gain actionable insights without complex BI tools or coding."
     },
     {
         id: "faq-2",
-        question: "How does Adro generate dashboards?",
-        answer: "Once you upload your dataset, Adro automatically analyzes the structure, identifies key metrics, detects trends, and generates real-time dashboards complete with KPIs and visual insights."
+        question: "How does ADRO generate dashboards?",
+        answer: "Once you upload your dataset, ADRO automatically analyzes the structure, identifies key metrics, detects trends, and generates real-time dashboards complete with KPIs and visual insights."
     },
     {
         id: "faq-3",
-        question: "Do I need technical skills to use Adro?",
-        answer: "No. Adro is designed for founders, analysts, operations teams, and business users. There is no coding required — simply upload your data and let AI handle the analytics."
+        question: "Do I need technical skills to use ADRO?",
+        answer: "No. ADRO is designed for founders, analysts, operations teams, and business users. There is no coding required — simply upload your data and let AI handle the analytics."
     },
     {
         id: "faq-4",
         question: "What file formats are supported?",
-        answer: "Adro supports CSV and Excel file formats. Enterprise plans may include extended integrations and direct data source connections."
+        answer: "ADRO supports CSV and Excel file formats. Enterprise plans may include extended integrations and direct data source connections."
     },
     {
         id: "faq-5",
@@ -46,13 +46,13 @@ const faqItems: FAQItem[] = [
     {
         id: "faq-6",
         question: "Is my data secure?",
-        answer: "Yes. Adro processes data securely in the cloud with enterprise-grade protection standards to ensure privacy and reliability."
+        answer: "Yes. ADRO processes data securely in the cloud with enterprise-grade protection standards to ensure privacy and reliability."
     },
 
     {
         id: "faq-7",
-        question: "Can Adro support enterprise-level analytics?",
-        answer: "Yes. Adro offers scalable enterprise solutions including higher data limits, advanced AI insights, custom integrations, and dedicated support."
+        question: "Can ADRO support enterprise-level analytics?",
+        answer: "Yes. ADRO offers scalable enterprise solutions including higher data limits, advanced AI insights, custom integrations, and dedicated support."
     }
 ];
 
@@ -68,10 +68,10 @@ function FAQ() {
                             </div>
                             <div className="flex gap-2 flex-col">
                                 <h4 className="text-3xl md:text-4xl lg:text-5xl tracking-tighter max-w-xl text-left font-regular">
-                                    Your Questions About Adro, Answered
+                                    Your Questions About ADRO, Answered
                                 </h4>
                                 <p className="text-lg max-w-xl lg:max-w-lg leading-relaxed tracking-tight text-muted-foreground text-left">
-                                    Adro helps you turn raw data into powerful AI-driven dashboards and actionable business insights.
+                                    ADRO helps you turn raw data into powerful AI-driven dashboards and actionable business insights.
                                 </p>
                             </div>
 

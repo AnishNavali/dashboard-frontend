@@ -110,7 +110,7 @@ export default function DocsContent({
                     <div className="flex flex-col gap-6 py-12 text-center items-center">
                         <Badge variant="outline" className="w-fit">Welcome</Badge>
                         <h1 className="text-4xl md:text-5xl lg:text-7xl font-regular tracking-tighter max-w-3xl">
-                            Master Adro Analytics
+                            Master ADRO Analytics
                         </h1>
                         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed tracking-tight">
                             Upload raw data and get instant AI-powered insights. No SQL, no configuration, just answers.

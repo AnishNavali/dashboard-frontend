@@ -27,7 +27,7 @@ const sections = [
   {
     title: "Company",
     links: [
-      { name: "About Adro", href: "/" },
+      { name: "About ADRO", href: "/" },
       { name: "Contact", href: "contact" }, // Special handling for contact
     ],
   },
@@ -72,18 +72,18 @@ const Footer = () => {
               <div className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center border border-white/20 bg-white/10 shadow-sm backdrop-blur-sm">
                 <Image
                   src="/logo.png"
-                  alt="Adro Logo"
+                  alt="ADRO Logo"
                   width={40}
                   height={40}
                   className="object-cover rounded-full p-1"
                 />
               </div>
               <span className="text-2xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent ml-3 tracking-tight">
-                Adro
+                ADRO
               </span>
             </Link>
             <p className="text-sm text-slate-600 leading-relaxed max-w-sm font-medium opacity-90">
-              Adro is an AI-powered data analytics platform that transforms CSV and Excel files into intelligent dashboards and actionable insights in seconds.
+              ADRO is an AI-powered data analytics platform that transforms CSV and Excel files into intelligent dashboards and actionable insights in seconds.
             </p>
 
             {/* Social Media Icons */}
@@ -553,7 +553,7 @@ const Footer = () => {
         {/* Footer Bottom Bar - Centered */}
         <div className="mt-6 pt-8 border-t border-slate-200/20 flex flex-col items-center justify-center gap-6">
           <div className="text-xs text-slate-500 font-medium text-center">
-            © {new Date().getFullYear()} Adro. All rights reserved. • Built for modern data teams
+            © {new Date().getFullYear()} ADRO. All rights reserved. • Built for modern data teams
           </div>
         </div>
       </div>

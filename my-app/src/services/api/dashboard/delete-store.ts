@@ -60,14 +60,19 @@ export const useDeleteFileStore = create<DeleteFileState>((set) => ({
         let errorMessage = errorText;
         try {
           const errorJson = JSON.parse(errorText);
-          if (errorJson.detail && Array.isArray(errorJson.detail)) {
-            errorMessage = errorJson.detail.map((err: any) => err.msg).join(", ");
+          if (errorJson.detail) {
+            if (Array.isArray(errorJson.detail)) {
+              errorMessage = errorJson.detail.map((err: any) => err.msg || JSON.stringify(err)).join(", ");
+            } else if (typeof errorJson.detail === "string") {
+              errorMessage = errorJson.detail;
+            } else {
+              errorMessage = JSON.stringify(errorJson.detail);
+            }
           } else if (errorJson.message) {
             errorMessage = errorJson.message;
           }
         } catch (error) {
-
-          throw error;
+          // Fall back to original error message
         }
 
         throw new Error(

@@ -75,7 +75,7 @@ const features = [
         icon: ZapIcon,
         title: "AI-Powered Insights",
         description:
-            "Our LLM uses smart agents to produce charts, KPIs, tables, and textual summaries automatically.",
+            "Our AI uses smart agents to produce charts, KPIs, tables, and textual summaries automatically.",
     },
     {
         icon: BarChartIcon,
@@ -95,7 +95,7 @@ const HomeSecOne = memo(() => {
     return (
         <>
             {/* Hero Section */}
-            <div className="w-full pb-16 pt-24 flex items-center xl:px-0 relative">
+            <div className="w-full pb-16 pt-12 flex items-center xl:px-0 relative">
                 <div className="w-full flex justify-center px-4 sm:px-6">
                     <div className="w-full">
                         <motion.div
@@ -167,12 +167,10 @@ const HomeSecOne = memo(() => {
                         <div className="flex gap-4 pl-0 lg:pl-20 flex-col flex-1 mb-8 sm:mb-12 lg:mb-0">
                             <div className="space-y-4 text-left pt-4 sm:pt-0">
                                 <h2 className="text-4xl font-bold tracking-tighter lg:max-w-xl">
-                                    Adro turns simple prompts into fully interactive, customized
+                                    ADRO turns simple prompts into fully interactive, customized
                                     dashboards in seconds.
                                 </h2>
-                                <p className="text-xl text-muted-foreground max-w-xl lg:max-w-sm leading-relaxed">
-                                    Adro builds dashboards from simple prompts.
-                                </p>
+
                             </div>
                         </div>
                         <div className="flex-1 pb-8 sm:mt-8 lg:mt-0">

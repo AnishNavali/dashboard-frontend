@@ -60,7 +60,7 @@ const HomeSecTwo = () => {
                     <TextGenerateEffect
                         duration={1.5}
                         filter={false}
-                        words="Adro turns your CSV and Excel data into intelligent dashboards instantly — no setup, no coding, just powerful insights."
+                        words="ADRO turns your CSV and Excel data into intelligent dashboards instantly — no setup, no coding, just powerful insights."
                     />
                 </div>
             </motion.div>
@@ -89,20 +89,20 @@ const HomeSecTwo = () => {
                             area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
                             icon={<Database className="h-4 w-4" />}
                             title="AI That Understands Data"
-                            description="Adro automatically detects structure, metrics, and patterns — no setup needed."
+                            description="ADRO automatically detects structure, metrics, and patterns — no setup needed."
                         />
 
                         <GridItem
                             area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/2/8]"
                             icon={<BarChart3 className="h-4 w-4" />}
                             title="Zero Complexity"
-                            description="No coding. No BI tools. Just powerful analytics made simple."
+                            description="No coding. No BI tools. Analytics made simple."
                         />
 
                         <GridItem
                             area="md:[grid-area:2/7/3/13] xl:[grid-area:2/5/3/8]"
                             icon={<LineChart className="h-4 w-4" />}
-                            title="Enterprise-Grade Security"
+                            title="Security"
                             description="Secure cloud infrastructure built for reliability and scale."
                         />
 
