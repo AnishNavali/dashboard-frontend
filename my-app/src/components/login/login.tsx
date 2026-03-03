@@ -80,9 +80,9 @@ export function LoginForm({
       {/* Main content centered */}
       <div className="flex-1 flex items-center justify-center pt-12 pb-32 px-4 relative overflow-hidden">
         {/* Install App Button top right below navbar */}
-        <div className="absolute top-4 right-4 z-20">
+        {/* <div className="absolute top-4 right-4 z-20">
           <InstallAppButton />
-        </div>
+        </div> */}
         {/* Minimalist Background Elements */}
         <div className="absolute inset-0 z-0 opacity-[0.6] pointer-events-none"
           style={{

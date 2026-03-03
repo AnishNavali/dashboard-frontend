@@ -6,7 +6,7 @@ export default function DemoPage() {
     return (
         <main>
             <NavigationBar />
-            <div className="max-w-4xl mx-auto px-6 py-16">
+            <div className="max-w-4xl mx-auto px-6 py-10">
                 <h1 className="text-4xl font-bold text-slate-800 mb-4">Demo</h1>
                 <p className="text-slate-500 text-lg">
                     See ADRO in action — no signup required.

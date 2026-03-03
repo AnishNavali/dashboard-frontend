@@ -81,7 +81,7 @@ const HomeSecTwo = () => {
                         <GridItem
                             area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
                             icon={<Upload className="h-4 w-4" />}
-                            title="Upload. Done."
+                            title="Upload Data"
                             description="Upload CSV or Excel files and instantly unlock intelligent dashboards."
                         />
 
@@ -95,29 +95,29 @@ const HomeSecTwo = () => {
                         <GridItem
                             area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/2/8]"
                             icon={<BarChart3 className="h-4 w-4" />}
-                            title="Dashboards in Seconds"
-                            description="Beautiful, interactive dashboards generated instantly from your data."
-                        />
-
-                        <GridItem
-                            area="md:[grid-area:2/7/3/13] xl:[grid-area:2/5/3/8]"
-                            icon={<LineChart className="h-4 w-4" />}
-                            title="Actionable Insights"
-                            description="Spot trends, anomalies, and growth opportunities with AI-powered analysis."
-                        />
-
-                        <GridItem
-                            area="md:[grid-area:3/1/4/7] xl:[grid-area:1/8/2/13]"
-                            icon={<Zap className="h-4 w-4" />}
                             title="Zero Complexity"
                             description="No coding. No BI tools. Just powerful analytics made simple."
                         />
 
                         <GridItem
-                            area="md:[grid-area:3/7/4/13] xl:[grid-area:2/8/3/13]"
-                            icon={<Shield className="h-4 w-4" />}
+                            area="md:[grid-area:2/7/3/13] xl:[grid-area:2/5/3/8]"
+                            icon={<LineChart className="h-4 w-4" />}
                             title="Enterprise-Grade Security"
                             description="Secure cloud infrastructure built for reliability and scale."
+                        />
+
+                        <GridItem
+                            area="md:[grid-area:3/1/4/7] xl:[grid-area:1/8/2/13]"
+                            icon={<Zap className="h-4 w-4" />}
+                            title="Dashboards in Seconds"
+                            description="Beautiful, interactive dashboards generated instantly from your data."
+                        />
+
+                        <GridItem
+                            area="md:[grid-area:3/7/4/13] xl:[grid-area:2/8/3/13]"
+                            icon={<Shield className="h-4 w-4" />}
+                            title="Actionable Insights"
+                            description="Spot trends, anomalies, and growth opportunities with AI-powered analysis."
                         />
                     </ul>
                 </motion.div>

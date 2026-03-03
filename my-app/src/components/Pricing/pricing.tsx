@@ -21,6 +21,10 @@ interface PricingProps {
 
 const defaultFeatures = [
     [
+        "Build dashboards at less than 0.1 credits",
+
+    ],
+    [
         "CSV & Excel Upload",
         "Instant AI Dashboards",
         "Smart KPI Detection",
@@ -38,7 +42,7 @@ const defaultFeatures = [
 ];
 
 export const Pricing = ({
-    heading = "Simple Credit-Based Pricing",
+    heading = "Pricing",
     description = "Only pay for what you use. No subscriptions. No hidden fees.",
     price = 1,
     freeCredits = 10,
@@ -46,13 +50,13 @@ export const Pricing = ({
     buttonText = "Get Started",
 }: PricingProps) => {
     return (
-        <section className="py-12 md:py-16">
+        <section className="py-14 md:py-14">
             <div className="container">
                 <div className="mx-auto max-w-4xl text-center space-y-8">
 
                     {/* Heading */}
                     <div className="space-y-3">
-                        <h2 className="text-3xl font-semibold lg:text-5xl">
+                        <h2 className="text-5xl font-semibold lg:text-5xl">
                             {heading}
                         </h2>
                         <p className="mx-auto max-w-md text-muted-foreground">
@@ -66,17 +70,17 @@ export const Pricing = ({
 
                             {/* Free Credits Badge */}
                             <div className="rounded-full bg-primary/10 px-4 py-1 text-sm font-medium text-primary">
-                                🎉 {freeCredits} Credits Free on Signup
+                                Pay-as-you-go
                             </div>
 
                             {/* Price */}
                             <div className="flex items-end justify-center gap-2">
-                                <span className="text-5xl font-bold">
-                                    ${price}
+                                <span className="text-2xl font-bold">
+                                    Start with 10 credits from us
                                 </span>
-                                <span className="text-muted-foreground text-base font-medium">
+                                {/* <span className="text-muted-foreground text-base font-medium">
                                     / 1 Credit
-                                </span>
+                                </span> */}
                             </div>
 
                         </CardHeader>
@@ -107,7 +111,11 @@ export const Pricing = ({
                                 </Link>
                             </Button>
                         </CardContent>
+
                     </Card>
+                    <p className="text-muted-foreground text-sm italic">
+                        * Credit consumption depends on usage, i.e, number of rows, columns, and complexity of the data and also the length of input and output.
+                    </p>
                 </div>
             </div>
         </section>
