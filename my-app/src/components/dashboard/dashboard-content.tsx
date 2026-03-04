@@ -529,18 +529,10 @@ export const DashboardContent = ({ userEmail }: DashboardContentProps) => {
       if (filteredFiles.length === 0) {
         return;
       }
-      const newFiles = await uploadFiles(userEmail, filteredFiles);
+      await uploadFiles(userEmail, filteredFiles);
 
-
-
-      const updatedFiles = [...uploadedFiles, ...newFiles];
-      setUploadedFiles(updatedFiles);
-      setStoreUploadedFiles(updatedFiles);
-
-      const newAvailableFiles = convertToDatabaseFiles(newFiles);
-      const updatedAvailableFiles = [...availableFiles, ...newAvailableFiles];
-      setAvailableFiles(updatedAvailableFiles);
-      setStoreAvailableFiles(updatedAvailableFiles);
+      // Refresh the file list from the server to get any backend changes (like underscores)
+      await loadInitialFiles();
 
       setRecentlyUploadedFile(files[0].name);
       setUploadSuccess(true);
