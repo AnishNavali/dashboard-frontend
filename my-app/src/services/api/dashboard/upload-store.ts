@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { create } from "zustand";
-// import { url } from "../api-url";
+import { url } from "../api-url";
 
 interface UploadState {
   uploading: boolean;
@@ -43,8 +43,8 @@ export const useUploadStore = create<UploadState>((set, get) => ({
         form.append("files", files);
       });
 
-
-      const response = await fetch(`https://54-85-180-205.sslip.io/api/upload-file`, {
+// https://54-85-180-205.sslip.io/api/upload-file
+      const response = await fetch(`https://34-238-137-65.sslip.io/api/upload-file`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
