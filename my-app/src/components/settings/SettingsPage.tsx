@@ -646,7 +646,7 @@ const handleCleanSubmit = () => {
     </span>
 
     <span className="text-green-600 font-medium">
-      +{currency === "INR" ? "₹" : "$"}{item.amount}
+      +({currency === "INR" ? "₹" : "$"}{item.amount})
     </span>
   </div>
       </div>
