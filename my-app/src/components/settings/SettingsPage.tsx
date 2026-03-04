@@ -106,9 +106,9 @@ const calculatePrice = (credits: number) => {
 };
 const price = calculatePrice(Number(credits));   
 const purchaseCredits = async () => {
-  // if (Number(credits) < 1) return;
+  if (Number(credits) < 1) return;
 
-  // setLoading(true);
+  setLoading(true);
 
   
 
@@ -595,8 +595,7 @@ const handleCleanSubmit = () => {
   <div className="flex items-center justify-between bg-slate-50 border border-slate-200 rounded-xl px-4 py-3">
 
     <Button
-      onClick={() => {
-    toast.info("Add Credits feature coming soon ");}}
+      onClick={purchaseCredits}
       disabled={loading}
       className="bg-blue-100 text-blue-700 hover:bg-blue-600 hover:text-white transition-all duration-200 rounded-lg px-5"
     >
