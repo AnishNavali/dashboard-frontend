@@ -623,7 +623,7 @@ const handleCleanSubmit = () => {
   <p className="text-sm font-semibold text-slate-800 mb-4">
     Recent Activity
   </p>
-<p className="text-xs text-slate-500 mt-1">your recent credit purchase activity is shown below</p>
+<p className="text-xs text-slate-500 mt-1">Your recent credit purchase activity is shown below</p>
   <div className="space-y-4 text-sm text-slate-600">
     {recentActivity.map((item, index) => (
       <div
@@ -645,8 +645,8 @@ const handleCleanSubmit = () => {
       +{item.credits}
     </span>
 
-   <span className="text-green-600 font-medium">
-  {`+(${currency === "INR" ? "₹" : "$"}${item.amount})`}
+ <span className="text-green-600 font-medium">
+  {"(" + (currency === "INR" ? "₹" : "$") + item.amount + ")"}
 </span>
   </div>
       </div>
