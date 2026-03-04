@@ -645,9 +645,9 @@ const handleCleanSubmit = () => {
       +{item.credits}
     </span>
 
-    <span className="text-green-600 font-medium">
-      +({currency === "INR" ? "₹" : "$"}{item.amount})
-    </span>
+   <span className="text-green-600 font-medium">
+  {`+(${currency === "INR" ? "₹" : "$"}${item.amount})`}
+</span>
   </div>
       </div>
     ))}
