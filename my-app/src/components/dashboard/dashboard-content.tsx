@@ -548,7 +548,7 @@ export const DashboardContent = ({ userEmail }: DashboardContentProps) => {
       }
     } catch (error) {
       if (toastId) toast.dismiss(toastId);
-      const id = toast.error("Upload failed. Please try again.");
+      const id = toast.error("Invalid data present in dataset.Please try again with different file with another format");
       setToastId(id);
     }
   };

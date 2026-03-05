@@ -134,7 +134,7 @@ const purchaseCredits = async () => {
 
 //razorpay api key
     const options = {
-      key: "rzp_test_SE0YAyn0Zv15Qy",
+      key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
       amount: order.amount,
       currency: order.currency,
       name: "ADRO",
