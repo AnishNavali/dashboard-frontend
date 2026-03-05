@@ -45,16 +45,16 @@ export const MessageInput = ({
   };
 
   return (
-    <div className=" bg-white/70 border rounded-2xl shadow-2xl   border-slate-200  overflow-hidden max-w-3xl">
-      <div className="p-4 pb-0 relative">
+    <div className="w-full bg-white/70 border rounded-2xl shadow-2xl border-slate-200 overflow-hidden max-w-3xl">
+      <div className="p-3 sm:p-4 pb-0 relative">
         <textarea
           ref={inputRef}
           placeholder="Ask me anything..."
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           onKeyPress={handleKeyPress}
-          className="w-full text-gray-700 bg-transparent text-base outline-none placeholder:text-gray-400 pr-20 resize-none"
-          rows={2}
+          className="w-full text-gray-700 bg-transparent text-sm sm:text-base outline-none placeholder:text-gray-400 pr-12 sm:pr-20 resize-none"
+          rows={1}
         />
       </div>
 
@@ -119,12 +119,13 @@ export const MessageInput = ({
             <Button
               onClick={onRetry}
               variant="ghost"
-              className="flex items-center gap-1.5 px-3 py-2 text-blue-600 hover:text-blue-700 hover:bg-blue-50 rounded-lg transition-colors"
+              className="flex items-center gap-1.5 px-2 sm:px-3 py-2 text-blue-600 hover:text-blue-700 hover:bg-blue-50 rounded-lg transition-colors"
               title="Retry last query"
               disabled={isLoading} // Disable while loading, but still show
             >
               <RotateCcw className="w-4 h-4" />
-              <span className="text-sm font-medium">Retry Last Prompt</span>
+              <span className="text-xs sm:text-sm font-medium hidden xs:inline">Retry</span>
+              <span className="text-sm font-medium hidden sm:inline">Last Prompt</span>
             </Button>
           )}
 
@@ -143,8 +144,8 @@ export const MessageInput = ({
               disabled={!inputValue.trim()}
               size="icon"
               className={`w-8 h-8 rounded-full transition-colors ${inputValue.trim()
-                  ? "bg-blue-600 text-white hover:bg-blue-700"
-                  : "bg-gray-100/70 text-gray-400 cursor-not-allowed"
+                ? "bg-blue-600 text-white hover:bg-blue-700"
+                : "bg-gray-100/70 text-gray-400 cursor-not-allowed"
                 }`}
             >
               <ArrowUp className="w-4 h-4" />

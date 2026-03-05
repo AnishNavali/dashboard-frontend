@@ -152,7 +152,7 @@ const HomeSecOne = memo(() => {
             </div>
 
             {/* Features Section */}
-            <section className="py-16 overflow-x-hidden">
+            <section className="py-8 sm:py-16 overflow-x-hidden">
                 <motion.div
                     initial={{ opacity: 0.0, x: -40 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -163,19 +163,20 @@ const HomeSecOne = memo(() => {
                     }}
                     className="container mx-auto space-y-8 px-4 md:px-6"
                 >
-                    <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-8 lg:items-center mb-20 md:mb-24 lg:mb-32">
-                        <div className="flex gap-4 pl-0 lg:pl-20 flex-col flex-1 mb-8 sm:mb-12 lg:mb-0">
-                            <div className="space-y-4 text-left pt-4 sm:pt-0">
-                                <h2 className="text-4xl font-bold tracking-tighter lg:max-w-xl">
+                    <div className="flex flex-col-reverse lg:flex-row gap-8 lg:gap-8 lg:items-center mb-12 md:mb-24 lg:mb-32">
+                        <div className="flex gap-4 pl-0 lg:pl-20 flex-col flex-1">
+                            <div className="space-y-4 text-center lg:text-left pt-4 sm:pt-0">
+                                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tighter lg:max-w-xl">
                                     ADRO turns simple prompts into fully interactive, customized
                                     dashboards in seconds.
                                 </h2>
-
                             </div>
                         </div>
-                        <div className="flex-1 pb-8 sm:mt-8 lg:mt-0">
-                            <div className="w-full px-2 sm:px-0">
-                                <DisplayCards cards={frameworkCards} />
+                        <div className="flex-1 pb-4 sm:mt-8 lg:mt-0">
+                            <div className="w-full px-2 sm:px-0 flex justify-center lg:justify-end">
+                                <div className="scale-75 sm:scale-90 md:scale-100 origin-center lg:origin-right">
+                                    <DisplayCards cards={frameworkCards} />
+                                </div>
                             </div>
                         </div>
                     </div>

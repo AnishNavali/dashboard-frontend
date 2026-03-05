@@ -56,7 +56,7 @@ const HomeSecTwo = () => {
                 transition={{ delay: 0.3, duration: 1, ease: "linear" }}
                 className="flex flex-col gap-4 items-center justify-center w-full max-w-4xl mx-auto"
             >
-                <div className="text-2xl text-center">
+                <div className="text-xl sm:text-2xl text-center px-2">
                     <TextGenerateEffect
                         duration={1.5}
                         filter={false}
