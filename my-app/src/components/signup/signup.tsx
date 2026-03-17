@@ -31,9 +31,19 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "../ui/dialog";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "../ui/alert-dialog";
 import { NavigationBar } from "../dashboard/navigation-bar";
 import Footer from "../footer/footer";
 import { InstallAppButton } from "../pwa/install-app-button";
+import { MailCheck } from "lucide-react";
 
 export function SignupPage({
   className,
@@ -53,8 +63,8 @@ export function SignupPage({
   });
 
   const [error, setError] = useState("");
-
   const [acceptedTerms, setAcceptedTerms] = useState(false);
+  const [showSuccessDialog, setShowSuccessDialog] = useState(false);
 
   const handleInputChange = (e: any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -93,14 +103,14 @@ export function SignupPage({
 
       await signup(payload);
 
+      // Store email for account-config page
+      sessionStorage.setItem("config_email", formData.email);
 
-      toast.success("Account created successfully! 🎉", {
-        duration: 2000,
+      setShowSuccessDialog(true);
+      
+      toast.success("Registration initiated! 📧", {
+        duration: 4000,
       });
-
-      setTimeout(() => {
-        router.push("/");
-      }, 1500);
     } catch (err: any) {
       toast.error(err.message || "Signup failed", {
         duration: 3000,
@@ -742,6 +752,24 @@ export function SignupPage({
         </Card>
       </div>
       <Footer />
+
+      <AlertDialog open={showSuccessDialog} onOpenChange={setShowSuccessDialog}>
+        <AlertDialogContent className="rounded-[2rem] border-blue-100 max-w-md">
+          <AlertDialogHeader className="flex flex-col items-center text-center">
+            <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mb-4">
+              <MailCheck className="h-8 w-8 text-blue-600" />
+            </div>
+            <AlertDialogTitle className="text-2xl font-bold text-gray-900">
+              Check Your Email
+            </AlertDialogTitle>
+            <AlertDialogDescription className="text-gray-600 mt-2 text-base leading-relaxed">
+              We've sent a configuration link to <span className="font-semibold text-blue-600">{formData.email}</span>. 
+              <br /><br />
+              Please click the link in your email to verify your account and set up your password.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }
