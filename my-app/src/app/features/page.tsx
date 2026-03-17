@@ -1,18 +1,17 @@
 "use client";
 
 import { NavigationBar } from "@/src/components/dashboard/navigation-bar";
-import { FAQ } from "@/src/components/Faq/Faq";
 import Footer from "@/src/components/footer/footer";
+import Features from "@/src/components/features/features";
 
-export default function FaqPage() {
+export default function FeaturesPage() {
     return (
-        <main>
+        <main className="min-h-screen flex flex-col">
             <NavigationBar />
-            <div className="max-w-4xl mx-auto px-6 py-16">
-                <FAQ />
+            <div className="flex-grow">
+                <Features />
             </div>
             <Footer />
         </main>
     );
 }
-

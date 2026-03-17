@@ -23,7 +23,8 @@ const navbarItems = [
   // { title: "Demo", href: "/demo" },
   { title: "Guide", href: "/docs" },
   { title: "Pricing", href: "/pricing" },
-  // { title: "About Us", href: "/about-us" },
+  { title: "Features", href: "/features" },
+  { title: "Use Cases", href: "/use-cases" },
   { title: "FAQ", href: "/faq" },
 ];
 

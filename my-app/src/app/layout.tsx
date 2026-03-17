@@ -16,6 +16,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport = {
+  themeColor: "#0066FF",
+};
+
 export const metadata: Metadata = {
   title: "ADRO - Your AI Data Analyst",
   description: "Build your dashboards with a single prompt. Your AI-powered data analyst.",
@@ -24,7 +28,6 @@ export const metadata: Metadata = {
     statusBarStyle: "default",
     title: "ADRO",
   },
-  themeColor: "#0066FF",
 };
 
 export default function RootLayout({
