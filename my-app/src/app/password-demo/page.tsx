@@ -1,4 +1,4 @@
-import PasswordField from "@/components/ui/password-field";
+import PasswordField from "@/src/components/ui/password-field";
 
 export default function PasswordFieldDemo() {
   return (

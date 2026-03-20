@@ -173,8 +173,8 @@ const HomeSecOne = memo(() => {
                             </div>
                         </div>
                         <div className="flex-1 pb-4 sm:mt-8 lg:mt-0">
-                            <div className="w-full px-2 sm:px-0 flex justify-center lg:justify-end">
-                                <div className="scale-75 sm:scale-90 md:scale-100 origin-center lg:origin-right">
+                            <div className="w-full sm:px-0 flex justify-center lg:justify-center">
+                                <div className="scale-75 sm:scale-90 md:scale-100 origin-center lg:origin-center">
                                     <DisplayCards cards={frameworkCards} />
                                 </div>
                             </div>
