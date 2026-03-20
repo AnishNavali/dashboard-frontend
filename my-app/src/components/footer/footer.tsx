@@ -20,7 +20,8 @@ const sections = [
     links: [
       { name: "Live Demo", href: "/#live-demo" },
       { name: "Guide", href: "/docs" },
-      { name: "Pricing", href: "/pricing" },
+      { name: "Blogs", href: "/blogs" },
+
 
     ],
   },
@@ -35,7 +36,8 @@ const sections = [
     title: "Support",
     links: [
       { name: "FAQs", href: "/faq" },
-      
+      { name: "Pricing", href: "/pricing" },
+
     ],
   },
 ];
@@ -134,7 +136,7 @@ const Footer = () => {
                               {link.name}
                             </button>
                           </DialogTrigger>
-                         
+
                         </Dialog>
                       ) : (
                         <Link
