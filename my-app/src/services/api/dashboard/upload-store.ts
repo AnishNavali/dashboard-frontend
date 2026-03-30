@@ -43,8 +43,8 @@ export const useUploadStore = create<UploadState>((set, get) => ({
         form.append("files", files);
       });
 
-// https://54-85-180-205.sslip.io/api/upload-file
-      const response = await fetch(`https://34-238-137-65.sslip.io/api/upload-file`, {
+// https://34-238-137-65.sslip.io
+      const response = await fetch(`https://3-91-74-128.sslip.io/api/upload-file`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
