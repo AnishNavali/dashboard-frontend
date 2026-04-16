@@ -62,6 +62,8 @@ export default function BlogsPage() {
           posts={blogPosts}
           buttonText="Back to Home"
           buttonUrl="/"
+          secondButtonText="Case Study"
+          secondButtonUrl="/usecase-stories"
         />
       </main>
       <Footer />
