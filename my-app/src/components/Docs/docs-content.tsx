@@ -77,6 +77,19 @@ function renderBlock(block: DocContentBlock, index: number) {
                 </div>
             );
 
+        case "link":
+            return (
+                <a
+                    key={index}
+                    href={block.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="docs-link text-base md:text-lg leading-relaxed tracking-tight text-primary hover:underline inline-block my-2"
+                >
+                    {block.text}
+                </a>
+            );
+
         default:
             return null;
     }
@@ -209,12 +222,13 @@ export default function DocsContent({
                         /* Regular View if no steps */
                         <div className="flex flex-col gap-10">
                             {subSection.mainImage && (
-                                <div className="rounded-2xl border bg-muted/30 aspect-[21/9] overflow-hidden shadow-sm relative">
+                                <div className="rounded-2xl border bg-muted/30 overflow-hidden shadow-sm relative w-full">
                                     <Image
                                         src={subSection.mainImage}
                                         alt={subSection.title}
-                                        fill
-                                        className="object-contain p-8"
+                                        width={1200}
+                                        height={600}
+                                        className="w-full h-auto object-cover"
                                     />
                                 </div>
                             )}

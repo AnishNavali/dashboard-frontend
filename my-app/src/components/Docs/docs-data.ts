@@ -14,10 +14,11 @@ export interface DocSubSection {
 }
 
 export interface DocContentBlock {
-    type: "paragraph" | "list" | "heading" | "code" | "callout" | "divider";
+    type: "paragraph" | "list" | "heading" | "code" | "callout" | "divider" | "link";
     text?: string;
     items?: string[];
     variant?: "info" | "tip" | "warning";
+    href?: string;
 }
 
 export interface DocSection {
@@ -260,6 +261,119 @@ export const docsData: DocSection[] = [
                     },
                 ],
             },
+        ],
+    },
+    {
+        id: "usecase-stories",
+        title: "Usecase Stories",
+        subSections: [
+            {
+                id: "growing-fast",
+                title: "1. Who is actually growing the fastest?",
+                content: [
+                    { type: "paragraph", text: "One simple question: \"Which company has the highest revenue growth trend over time?\"" },
+                    { type: "paragraph", text: "Insight:" },
+                    { type: "list", items: [
+                        "Amazon dominates with ~75,400% growth",
+                        "Netflix shows massive % growth due to a low starting base",
+                        "Google shows the most consistent long-term growth",
+                        "Facebook grows steadily but over a shorter timeline"
+                    ]},
+                    { type: "paragraph", text: "Conclusion: Amazon isn’t just growing — it’s scaling at a completely different level." },
+                    { type: "paragraph", text: "Source:" }
+                ],
+            },
+            {
+                id: "anomaly-detection",
+                title: "2. When things go wrong (Anomaly Detection)",
+                content: [
+                    { type: "paragraph", text: "I asked: \"Detect sudden drops in performance\"" },
+                    { type: "paragraph", text: "What ADRO found instantly:" },
+                    { type: "list", items: [
+                        "Facebook had its biggest crash during the Cambridge Analytica scandal",
+                        "Amazon drops were tied to earnings misses",
+                        "Netflix dips aligned with subscriber loss concerns",
+                        "Google drops reflected market pressure and revenue concerns"
+                    ]},
+                    { type: "paragraph", text: "This is powerful because: You’re not just seeing data — you’re seeing real-world events reflected in it" },
+                    { type: "paragraph", text: "Source:" }
+                ],
+            },
+            {
+                id: "drives-growth",
+                title: "3. What actually drives growth?",
+                content: [
+                    { type: "paragraph", text: "Instead of guessing, I asked: \"Explain the main drivers of growth for each company\"" },
+                    { type: "paragraph", text: "Clear breakdown:" },
+                    { type: "list", items: [
+                        "Amazon → E-commerce + AWS (Cloud dominance)",
+                        "Google → Search Ads + YouTube + Cloud",
+                        "Facebook → Mobile Ads + Instagram ecosystem",
+                        "Netflix → Streaming + Original content"
+                    ]},
+                    { type: "paragraph", text: "Insight: Every company scaled by owning a core engine + expanding smartly" }
+                ],
+            },
+            {
+                id: "efficiency",
+                title: "4. Efficiency: Who uses their growth best?",
+                content: [
+                    { type: "paragraph", text: "I asked: \"Compare profit efficiency across companies\"" },
+                    { type: "paragraph", text: "Result:" },
+                    { type: "list", items: [
+                        "Amazon → Highest return efficiency",
+                        "Netflix → High growth but volatile",
+                        "Facebook → Stable but moderate",
+                        "Google → Most stable, but lowest return margin"
+                    ]},
+                    { type: "paragraph", text: "Insight: High growth ≠ efficiency. Amazon manages to do both." }
+                ],
+            },
+            {
+                id: "profit-cost",
+                title: "5. Profit vs Cost — What changed over time?",
+                content: [
+                    { type: "paragraph", text: "Another question: \"Compare profit vs expenses\"" },
+                    { type: "paragraph", text: "Key finding:" },
+                    { type: "list", items: [
+                        "All companies saw massive cost (valuation) growth",
+                        "Profit margins were small and volatile for years",
+                        "2020 was a breakout year for everyone (digital boom)"
+                    ]},
+                    { type: "paragraph", text: "Insight: External events (like COVID) can reshape entire industries overnight" }
+                ],
+            },
+            {
+                id: "scalability",
+                title: "6. Scalability — Who wins long term?",
+                content: [
+                    { type: "paragraph", text: "Final question: \"Which company is most scalable?\"" },
+                    { type: "paragraph", text: "Clear winner:" },
+                    { type: "list", items: [
+                        "Amazon → ~1030x growth",
+                        "Netflix → ~645x",
+                        "Google → ~22x",
+                        "Facebook → ~10x"
+                    ]},
+                    { type: "paragraph", text: "Insight: Amazon’s ability to expand into multiple industries (AWS, logistics, streaming) makes it the most scalable." }
+                ],
+            },
+            {
+                id: "data-sources",
+                title: "Data Sources",
+                content: [
+                    { type: "paragraph", text: "Public historical stock data (1997–2020)" },
+                    { type: "paragraph", text: "Yahoo Finance, NASDAQ, Google Finance" },
+                    { type: "paragraph", text: "Stock Price Dataset Repository" }
+                ],
+            },
+            {
+                id: "final-thoughts",
+                title: "Final Thoughts",
+                content: [
+                    { type: "paragraph", text: "Traditional tools require data modeling, dashboards, and complex formulas. With ADRO, you ask questions and get insights directly." }
+                ],
+            }
         ],
     },
 

@@ -90,7 +90,7 @@ const Footer = () => {
 
             {/* Social Media Icons */}
             <div className="flex items-center gap-4 mt-2">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border border-slate-200/50 hover:border-blue-500/50 hover:bg-white/50 hover:text-blue-600 transition-all duration-300 group" aria-label="Instagram">
+              <a href="https://www.instagram.com/equilibrate.ai?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border border-slate-200/50 hover:border-blue-500/50 hover:bg-white/50 hover:text-blue-600 transition-all duration-300 group" aria-label="Instagram">
                 <Instagram className="w-4 h-4 group-hover:scale-110" />
               </a>
 

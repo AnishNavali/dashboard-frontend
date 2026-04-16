@@ -34,8 +34,6 @@ export default function DocsSidebar({
 
     return (
         <aside className="docs-sidebar">
-
-
             <nav className="docs-sidebar-nav">
                 {sections.map((section) => {
                     const isExpanded = expandedSections.has(section.id);
@@ -64,7 +62,7 @@ export default function DocsSidebar({
                             {/* Sub-section items — collapsible */}
                             <div
                                 className={`docs-sidebar-subitems ${isExpanded ? "expanded" : ""
-                                    }`}
+                                    } ${section.id === "overview" ? "overview-horizontal-scroll" : ""}`}
                             >
                                 {section.subSections.map((sub) => (
                                     <button

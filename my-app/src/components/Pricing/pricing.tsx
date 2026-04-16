@@ -106,7 +106,7 @@ export const Pricing = ({
                             ))}
 
                             <Button asChild className="w-full" size="lg">
-                                <Link href="/signup">
+                                <Link href="/login">
                                     {buttonText}
                                 </Link>
                             </Button>

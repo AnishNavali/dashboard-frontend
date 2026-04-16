@@ -25,6 +25,8 @@ interface Blog7Props {
   description: string;
   buttonText: string;
   buttonUrl: string;
+  secondButtonText?: string;
+  secondButtonUrl?: string;
   posts: Post[];
 }
 
@@ -34,6 +36,8 @@ const Blog7 = ({
   description = "Discover the latest trends, tips, and best practices in modern web development. From UI components to design systems, stay updated with our expert insights.",
   buttonText = "View all articles",
   buttonUrl = "#",
+  secondButtonText,
+  secondButtonUrl,
   posts = [],
 }: Blog7Props) => {
   return (
@@ -49,12 +53,22 @@ const Blog7 = ({
           <p className="mb-8 text-muted-foreground md:text-base lg:max-w-2xl lg:text-md">
             {description}
           </p>
-          <Button variant="outline" className="w-full sm:w-auto" asChild>
-            <Link href={buttonUrl}>
-              {buttonText}
-              <ArrowRight className="ml-2 size-4" />
-            </Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="outline" className="w-full sm:w-auto" asChild>
+              <Link href={buttonUrl}>
+                {buttonText}
+                <ArrowRight className="ml-2 size-4" />
+              </Link>
+            </Button>
+            {secondButtonText && secondButtonUrl && (
+              <Button variant="outline" className="w-full sm:w-auto" asChild>
+                <Link href={secondButtonUrl}>
+                  {secondButtonText}
+                  <ArrowRight className="ml-2 size-4" />
+                </Link>
+              </Button>
+            )}
+          </div>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 w-full max-w-7xl mx-auto">
           {posts.map((post) => (

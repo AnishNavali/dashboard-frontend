@@ -334,9 +334,9 @@ AI analytics platforms are particularly effective for:
 
 This makes them ideal for modern teams that need to move fast and adapt quickly.
 
-### How Equilibrate.ai Approaches AI Analytics
+### How Equilibrate.AI Approaches AI Analytics
 
-Equilibrate.ai focuses on building AI-driven analytics solutions that reduce complexity and improve accessibility.
+Equilibrate.AI focuses on building AI-driven analytics solutions that reduce complexity and improve accessibility.
 
 Instead of requiring users to navigate complex tools, the platform enables teams to interact with data more naturally and efficiently.
 
@@ -464,9 +464,9 @@ Businesses adopting AI for operations see measurable improvements:
 
 AI allows teams to focus on strategic work instead of repetitive tasks.
 
-### How Equilibrate.ai Enables AI Automation
+### How Equilibrate.AI Enables AI Automation
 
-Equilibrate.ai helps organizations implement AI-driven systems that integrate directly into business workflows.
+Equilibrate.AI helps organizations implement AI-driven systems that integrate directly into business workflows.
 
 Instead of adding complexity, the platform focuses on simplifying operations through:
 • intelligent automation
@@ -587,9 +587,9 @@ Organizations are increasingly moving toward AI platforms because they:
 
 More importantly, they allow businesses to move from manual processes to intelligent systems.
 
-### How Equilibrate.ai Approaches AI Platforms
+### How Equilibrate.AI Approaches AI Platforms
 
-Equilibrate.ai focuses on building practical AI platforms that integrate directly into business workflows.
+Equilibrate.AI focuses on building practical AI platforms that integrate directly into business workflows.
 
 Rather than creating isolated tools, the platform enables organizations to:
 
@@ -720,7 +720,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
             <p className="text-muted-foreground">Start using ADRO today and get insights in seconds.</p>
           </div>
           <Button size="lg" className="rounded-full px-8 h-14 text-lg" asChild>
-            <Link href="/">Get Started Free</Link>
+            <Link href="/login">Get Started Free</Link>
           </Button>
         </div>
       </footer>
